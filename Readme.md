@@ -5,3 +5,8 @@
 - `libs` has all modules that transform the json for the specific platforms
 - `filesToCopy` is holding all files that are not generated but should just be copied to the build directory
 - `orginput` holds sample .json files
+
+
+Run
+
+node build.js
