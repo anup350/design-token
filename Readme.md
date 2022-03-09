@@ -1,3 +1,4 @@
+**Examples**
 
 - `input/*.json` is the token file exported from figma
 - `build` is the directory with all the output files for iOS, Android and web
@@ -7,6 +8,7 @@
 - `orginput` holds sample .json files
 
 
-Run
+**Run**
 
+npm i | npm i --force
 node build.js
