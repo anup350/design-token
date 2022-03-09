@@ -1,0 +1,22 @@
+{
+  "button": {
+    "girish": {
+      "yml": {
+      "primary": {
+        "first": {
+          "value": "#586fcd",
+          "description": "primarColor",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "second": {
+          "value": "#c37979",
+          "type": "color",
+          "description": "secondaryColor"
+        }
+      }
+    }
+    }
+  }
+}

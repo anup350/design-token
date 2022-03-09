@@ -1,0 +1,119 @@
+{
+  "data": {
+    "sentence": {
+      "value": 12,
+      "type": "other"
+    }
+  },
+  "case": {
+    "lower": {
+      "value": "lowercase",
+      "type": "textCase"
+    }
+  },
+  "decoration": {
+    "para": {
+      "value": "underline",
+      "type": "textDecoration"
+    }
+  },
+  "space": {
+    "document": {
+      "value": 6,
+      "type": "paragraphSpacing"
+    },
+    "para": {
+      "value": 2,
+      "type": "letterSpacing"
+    }
+  },
+  "height": {
+    "para": {
+      "value": 2,
+      "type": "lineHeights"
+    }
+  },
+  "family": {
+    "header": {
+      "value": "Arial",
+      "type": "fontFamilies"
+    }
+  },
+  "weight": {
+    "label": {
+      "value": 12,
+      "type": "fontWeights"
+    }
+  },
+  "size": {
+    "header": {
+      "value": 16,
+      "type": "fontSizes"
+    }
+  },
+  "label": {
+    "value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "lineHeight": "AUTO",
+      "fontSize": 18,
+      "letterSpacing": "1%",
+      "paragraphSpacing": 2,
+      "textDecoration": "none",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "shadow": {
+    "card": {
+      "value": {
+        "x": 4,
+        "y": 6,
+        "blur": 4,
+        "spread": 6,
+        "color": "#000000",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    }
+  },
+  "button": {
+    "value": "20%",
+    "type": "opacity"
+  },
+  "radius": {
+    "button": {
+      "value": 16,
+      "type": "borderRadius"
+    }
+  },
+  "width": {
+    "card": {
+      "value": "{widht.generic}",
+      "type": "borderWidth",
+      "failedToResolve": true
+    }
+  },
+  "widht": {
+    "generic": {
+      "value": 12,
+      "type": "borderWidth"
+    }
+  },
+  "color": {
+    "primary": {
+      "first": {
+        "value": "#586fcd",
+        "description": "primarColor",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "second": {
+        "value": "#c37979",
+        "type": "color",
+        "description": "secondaryColor"
+      }
+    }
+  }
+}
