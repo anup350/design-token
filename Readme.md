@@ -10,5 +10,6 @@
 
 **Run**
 
-npm i | npm i --force
+npm i _or_ npm i --force
+
 node build.js
