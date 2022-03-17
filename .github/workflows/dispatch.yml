@@ -15,7 +15,7 @@ jobs:
         id: create-json
         uses: jsdaniell/create-json@1.1.2
         with:
-          name: "input/od.json"
+          name: "./input/od.json"
           json: ${{ toJson(github.event.client_payload.tokens) }}
         
       - uses: actions/checkout@v2
