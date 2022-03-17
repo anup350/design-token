@@ -6,14 +6,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ../input
     
     steps:
-      - name: Replace json
-        run: echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
-
+      - name: Go to input directory
+        run: |
+             rm -r input
+             mkdir input
+             cd input
+             
+      - name: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: "od.json"
+          json: toJson(github.event.client_payload.tokens)
+        
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Tokens
