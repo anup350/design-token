@@ -12,6 +12,7 @@ jobs:
         run: |
              mkdir input
              cd input
+             pwd
              
       - name: create-json
         uses: jsdaniell/create-json@1.1.2
