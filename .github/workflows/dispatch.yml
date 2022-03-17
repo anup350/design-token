@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: input
+        working-directory: ./input
     
     steps:
       - name: Replace json
