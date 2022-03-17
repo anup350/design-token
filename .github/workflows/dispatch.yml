@@ -18,6 +18,10 @@ jobs:
         run: pwd
       - name: Listfile
         run: ls
+      - name: directory
+        run: cd..
+      - name: path2
+        run: pwd
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Create token
