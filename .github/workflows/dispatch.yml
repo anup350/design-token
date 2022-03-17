@@ -10,6 +10,8 @@ jobs:
         uses: actions/checkout@main
       - name: Go to input folder
         run: cd input
+      - name: path1
+        run: pwd
       - name: Replace json
         run: echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
 
