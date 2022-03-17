@@ -23,7 +23,7 @@ jobs:
           commit_message: Update Tokens
           
           
-      - uses: actions/checkout@main
+ 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       # Convert tokens according to Style Dictionary config
