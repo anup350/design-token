@@ -9,13 +9,11 @@ jobs:
       - name: checkOut
         uses: actions/checkout@main
       - name: Go to input folder
-        run: cd input
+        run: mkdir input | cd input
       - name: Replace json
         run: echo ${{ toJson(github.event.client_payload.tokens) }} od.json
 
-      - name: Commit gile
-        run : git config --local user.email "girish.h@ymedialabs.com"
-              git config --local user.name "Girish"
-              git commit -m "Updated tokens"
-              git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Tokens
   
