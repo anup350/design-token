@@ -15,6 +15,7 @@ jobs:
 
       - name: Commit gile
         run : git config --global user.email "girish.h@ymedialabs.com"
-              git config --global user.name "Girish" |
-              git commit -m "Updated tokens" | git push
+              git config --global user.name "Girish"
+              git commit -m "Updated tokens"
+              git push
   
