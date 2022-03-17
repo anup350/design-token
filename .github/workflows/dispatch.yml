@@ -6,9 +6,12 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    
+      - name: checkOut
+        uses: actions/checkout@main
+      - name: Go to input folder
+        run: cd input
       - name: Replace json
-        run: cd input | echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
+        run: echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
