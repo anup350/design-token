@@ -1,7 +1,9 @@
 name: CI
 on: 
-  [push]
-
+  push:
+    paths: 
+      - input/**
+      
 jobs:
   build:
     runs-on: ubuntu-latest
