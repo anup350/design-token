@@ -7,12 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create token file using data from Figma
-        env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload.tokens) }}
-        run: echo "$PAYLOAD_CONTEXT"
-
-      - name: create-json
-        id: create-json
         uses: jsdaniell/create-json@1.1.2
         with:
           name: "od.json"
