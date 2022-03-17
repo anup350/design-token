@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: checkOut
         uses: actions/checkout@main
-      - name : Create folder
-        run : mkdir input
       - name: Replace json
         run: cd input | echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
 
