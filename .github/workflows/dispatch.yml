@@ -14,5 +14,7 @@ jobs:
         run: echo ${{ toJson(github.event.client_payload.tokens) }} od.json
 
       - name: Commit gile
-        run : git commit -m "Updated tokens" | git push
+        run : git config --global user.email "girish.h@ymedialabs.com"
+              git config --global user.name "Girish" |
+              git commit -m "Updated tokens" | git push
   
