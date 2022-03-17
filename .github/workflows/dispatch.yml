@@ -2,12 +2,12 @@ name: Repository Dispatch
 on:
   repository_dispatch:
     types: [update-tokens]
+    
 jobs:
-  tests:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: checkOut
-        uses: actions/checkout@main
       - name: Go to input folder
         run: cd input
       - name: path1
