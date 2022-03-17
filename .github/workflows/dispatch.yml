@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Go to input directory
         run: |
-             rm -r input
              mkdir input
              cd input
              
