@@ -9,7 +9,7 @@ const StyleDictionary = require('style-dictionary')
 
 // PATHS
 const basePath = './'
-const buildPath = basePath + 'build/'
+const buildPath = 'build/'
 
 
 const StyleDictionaryExtended = StyleDictionary.extend({
