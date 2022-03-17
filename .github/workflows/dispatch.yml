@@ -14,7 +14,8 @@ jobs:
           name: "od.json"
           json: ${{ toJson(github.event.client_payload.tokens) }}
           dir: "input"
-        
+      - name: path1
+        run: pwd
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Create token
