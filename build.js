@@ -19,7 +19,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
   platforms: {
     css: {
       transformGroup: 'custom/css',
-      buildPath: buildPath + '/css/',
+      buildPath: buildPath + 'css/',
       options: {
         fontFamilies: {
           'Akzidenz-Grotesk Pro': '"Akzidenz-Grotesk Pro", sans-serif'
@@ -35,7 +35,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
     },
     scss: {
       transformGroup: 'custom/css',
-      buildPath: buildPath + '/scss/',
+      buildPath: buildPath + 'scss/',
       files: [
         {
           filter: require('./libs/web/filterWeb'),
