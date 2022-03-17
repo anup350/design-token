@@ -8,10 +8,8 @@ jobs:
     steps:
       - name: checkOut
         uses: actions/checkout@main
-      - name: Go to input folder
-        run: mkdir input | cd input
       - name: Replace json
-        run: echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
+        run: cd input | echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
