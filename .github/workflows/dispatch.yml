@@ -6,12 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: input
     
     steps:
-      - name: Go to input folder
-        run: cd input
-      - name: path1
-        run: pwd
       - name: Replace json
         run: echo ${{ toJson(github.event.client_payload.tokens) }} > od.json
 
