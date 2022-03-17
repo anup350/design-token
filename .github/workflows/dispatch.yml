@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Dump the client payload context
         env:
-          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
+          PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload.tokens) }}
         run: echo "$PAYLOAD_CONTEXT"
 
       - uses: actions/checkout@v2
