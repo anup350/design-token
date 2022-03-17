@@ -1,5 +1,8 @@
 name: CI
-on: [push]
+on: 
+  push:
+    paths: 
+      - 'input/'
 
 jobs:
   build:
@@ -16,4 +19,3 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Tokens
-          file_pattern: build/*.*
