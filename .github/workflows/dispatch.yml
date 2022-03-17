@@ -15,8 +15,9 @@ jobs:
         id: create-json
         uses: jsdaniell/create-json@1.1.2
         with:
-          name: "../input/od.json"
+          name: "od.json"
           json: ${{ toJson(github.event.client_payload.tokens) }}
+          dir: 'input/'
         
       - uses: actions/checkout@v2
         if: github.event.client_payload.ref != ''
