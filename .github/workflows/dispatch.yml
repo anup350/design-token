@@ -18,9 +18,6 @@ jobs:
           name: "od.json"
           json: ${{ toJson(github.event.client_payload.tokens) }}
         
-      - uses: actions/checkout@v2
-        if: github.event.client_payload.ref != ''
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - run: echo ${{ github.event.client_payload.sha }}
+          commit_message: Create token
