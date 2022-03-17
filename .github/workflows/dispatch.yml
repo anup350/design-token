@@ -6,16 +6,12 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Create folder
-        run: mkdir input
-      - name: Create token file using data from Figma
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          name: "od.json"
-          json: ${{ toJson(github.event.client_payload.tokens) }}
-          dir: "input"
-      - name: path1
-        run: pwd
+      - name: checkOut
+        uses: actions/checkout@main
+      - name: Go to input folder
+        run: cd input
+      - name: Replace json
+        run: echo ${{ toJson(github.event.client_payload.tokens) }} od.json
       - name: Listfile
         run: ls
       - name: directory
