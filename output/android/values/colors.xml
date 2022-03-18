@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Do not edit directly
-  Generated on Fri, 18 Mar 2022 01:25:17 GMT
+  Generated on Fri, 18 Mar 2022 01:29:21 GMT
 -->
 <resources>
   <color name="black">#000000ff</color>;
@@ -17,7 +17,7 @@
   <color name="secondary100">#f3f1e7ff</color>;
   <color name="secondary200">#f6f4ecff</color>;
   <color name="secondary300">#f8f6f0ff</color>;
-  <color name="tertiary">#313a2eff</color>;
+  <color name="tertiary">#d81846ff</color>;
   <color name="tertiary100">#575e55ff</color>;
   <color name="tertiary200">#7b8179ff</color>;
   <color name="tertiary300">#999e98ff</color>;
