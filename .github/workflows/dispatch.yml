@@ -15,7 +15,7 @@ jobs:
         uses: jsdaniell/create-json@1.1.2
         with:
           name: "od.json"
-          json: ${{ toJson(github.event.client_payload.tokens) }}
+          json: ${{ github.event.client_payload.tokens }}
           dir: 'input/'
         
       - uses: stefanzweifel/git-auto-commit-action@v4
