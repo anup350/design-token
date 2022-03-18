@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Do not edit directly
-  Generated on Fri, 18 Mar 2022 00:50:04 GMT
+  Generated on Fri, 18 Mar 2022 00:51:55 GMT
 -->
 <resources>
   <color name="black">#000000ff</color>;
@@ -10,7 +10,7 @@
   <color name="alert">#e4a832ff</color>;
   <color name="error">#e43232ff</color>;
   <color name="primary">#0b1e37ff</color>;
-  <color name="primary100">#39485dff</color>;
+  <color name="primary100">#39485eff</color>;
   <color name="primary200">#636f7fff</color>;
   <color name="primary300">#87909dff</color>;
   <color name="secondary">#f1ede1ff</color>;
