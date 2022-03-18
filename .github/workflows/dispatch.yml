@@ -32,4 +32,19 @@ jobs:
       # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update Tokens       
+          commit_message: Update Tokens      
+          
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Pushes Android file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'output/android/values/colors.xml'
+          destination_repo: 'Girish-yml/DesignSystem'
+          destination_folder: 'app/src/main/res/values'
+          user_email: 'girish.h@ymedialabs.com'
+          user_name: 'Girish-yml'
+          commit_message: 'Commit color.xml'
