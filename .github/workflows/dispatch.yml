@@ -37,28 +37,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
 
-      - name: Pushes Android file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'output/android/values/colors.xml'
-          destination_repo: 'yml-org/OutdoorsyAndroid_POC'
-          destination_folder: 'CoreUi/src/main/res/values'
-          user_email: 'brujat.u@ymedialabs.com'
-          user_name: 'brujat'
-          commit_message: 'Commit color.xml'
-
-      # - name: Create pull request for web
-      #   uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      # - name: Pushes Android file
+      #   uses: dmnemec/copy_file_to_another_repo_action@main
       #   env:
       #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       #   with:
-      #     source_folder: 'output/scss'
-      #     destination_repo: 'yml-org/design-system-fe'
-      #     destination_folder: 'src/scss'
-      #     destination_base_branch: 'main'
-      #     destination_head_branch: 'style-auto-update'
+      #     source_file: 'output/android/values/colors.xml'
+      #     destination_repo: 'yml-org/OutdoorsyAndroid_POC'
+      #     destination_folder: 'CoreUi/src/main/res/values'
       #     user_email: 'brujat.u@ymedialabs.com'
       #     user_name: 'brujat'
-      #     pull_request_reviewers: 'reviewers'
+      #     commit_message: 'Commit color.xml'
+
+      - name: Create pull request for web
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: 'output/scss'
+          destination_repo: 'yml-org/design-system-fe'
+          destination_folder: 'src/scss'
+          destination_base_branch: 'main'
+          destination_head_branch: 'style-auto-update'
+          user_email: 'brujat.u@ymedialabs.com'
+          user_name: 'brujat'
+          
