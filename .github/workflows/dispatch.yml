@@ -4,49 +4,71 @@ on:
     types: [update-tokens]
     
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main
+  job1:
+    build:
+      runs-on: ubuntu-latest
       
-      - name: create-json
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          name: "od.json"
-          json: ${{ github.event.client_payload.tokens }}
-          dir: 'input/'
+      steps:
+        - name: Checkout
+          uses: actions/checkout@main
         
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Tokens
+        - name: create-json
+          uses: jsdaniell/create-json@1.1.2
+          with:
+            name: "od.json"
+            json: ${{ github.event.client_payload.tokens }}
+            dir: 'input/'
           
-          
- 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.4.0
-      # Convert tokens according to Style Dictionary config
-      - run: npm i --force
-      - run: node build.js
-      # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Tokens      
-          
-      - name: Checkout
-        uses: actions/checkout@main
+        - uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Update Tokens
+            
+            
+  
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.4.0
+        # Convert tokens according to Style Dictionary config
+        - run: npm i --force
+        - run: node build.js
+        # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
+        - uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Update Tokens      
+            
+        - name: Checkout
+          uses: actions/checkout@main
 
-      - name: Pushes Android file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'output/android/values/colors.xml'
-          destination_repo: 'yml-org/OutdoorsyAndroid_POC'
-          destination_folder: 'CoreUi/src/main/res/values'
-          user_email: 'brujat.u@ymedialabs.com'
-          user_name: 'brujat'
-          commit_message: 'Commit color.xml'
+        - name: Pushes Android file
+          uses: dmnemec/copy_file_to_another_repo_action@main
+          env:
+            API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          with:
+            source_file: 'output/android/values/colors.xml'
+            destination_repo: 'yml-org/OutdoorsyAndroid_POC'
+            destination_folder: 'CoreUi/src/main/res/values'
+            user_email: 'brujat.u@ymedialabs.com'
+            user_name: 'brujat'
+            commit_message: 'Commit color.xml'
+
+  job2: 
+    needs: job1
+    pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_folder: 'output/scss'
+        destination_repo: 'yml-org/design-token'
+        destination_folder: 'src/scss'
+        destination_base_branch: 'main'
+        destination_head_branch: 'stype-update'
+        user_email: 'brujat.u@ymedialabs.com'
+        user_name: 'brujat'
 
           
