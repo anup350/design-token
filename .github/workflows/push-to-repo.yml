@@ -1,0 +1,27 @@
+name: Push File
+
+on:
+  push:
+    paths:
+     -output/**
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_folder: 'output/scss'
+        destination_repo: 'yml-org/design-token'
+        destination_folder: 'src/scss'
+        destination_base_branch: 'main'
+        destination_head_branch: 'stype-update'
+        user_email: 'brujat.u@ymedialabs.com'
+        user_name: 'brujat'
+      
