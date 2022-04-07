@@ -42,7 +42,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: 'output/scss/variable.scss'
+          source_file: 'output/scss/variables.scss'
           destination_repo: 'brujat/design-system-fe'
           destination_folder: 'src/scss'
           user_email: 'brujat.u@ymedialabs.com'
