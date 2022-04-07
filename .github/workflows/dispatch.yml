@@ -37,16 +37,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
 
-       - name: Pushes web file
-         uses: dmnemec/copy_file_to_another_repo_action@main
-         env:
-           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-         with:
-            source_file: 'output/scss/variables.scss'
-            destination_repo: 'brujat/design-system-android'
-            destination_folder: 'src/scss'
-            user_email: 'brujat.u@ymedialabs.com'
-            user_name: 'brujat'
-            commit_message: 'Commit variables.scss'
+      - name: Pushes Android file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'output/android/values/colors.xml'
+          destination_repo: 'brujat/design-system-android'
+          destination_folder: 'CoreUi/src/main/res/values'
+          user_email: 'brujat.u@ymedialabs.com'
+          user_name: 'brujat'
+          commit_message: 'Commit color.xml'
+
 
           
