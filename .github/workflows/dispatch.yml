@@ -45,8 +45,8 @@ jobs:
           source_file: 'output/android/values/colors.xml'
           destination_repo: 'yml-org/OutdoorsyAndroid_POC'
           destination_folder: 'CoreUi/src/main/res/values'
-          user_email: 'license@ymedialabs.com'
-          user_name: 'license-yml'
+          user_email: 'brujat.u@ymedialabs.com'
+          user_name: 'brujat'
           commit_message: 'Commit color.xml'
 
           
