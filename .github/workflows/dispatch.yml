@@ -50,10 +50,10 @@ jobs:
           commit_message: 'Commit color.xml'
 
        - name: Pushes web file
-          uses: dmnemec/copy_file_to_another_repo_action@main
-          env:
-            API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          with:
+         uses: dmnemec/copy_file_to_another_repo_action@main
+         env:
+           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+         with:
             source_file: 'output/scss/variables.scss'
             destination_repo: 'brujat/design-system-android'
             destination_folder: 'src/scss'
