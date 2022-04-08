@@ -1,4 +1,4 @@
-name: Push File Android
+name: Push File IOS
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
         source_folder: 'output/ios'
         destination_repo: 'brujat/design-system-ios'
         destination_folder: 'ODDesignSystem/Resources'
+        destination_base_branch: 'master'
         destination_head_branch: 'generated-styles'
         user_email: 'brujat@ymedialabs.com'
         user_name: 'brujat'
