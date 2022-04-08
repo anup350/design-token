@@ -19,7 +19,7 @@ jobs:
       with:
         source_folder: 'output/scss'
         destination_repo: 'brujat/design-system-fe'
-        destination_folder: 'src/scss'
+        destination_folder: 'src'
         destination_head_branch: 'generated-styles'
         user_email: 'brujat@ymedialabs.com'
         user_name: 'brujat'
