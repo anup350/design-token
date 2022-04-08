@@ -18,7 +18,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_folder: 'output/android/values'
-        destination_repo: 'brujat/design-system-andriod'
+        destination_repo: 'brujat/design-system-android'
         destination_folder: 'CoreUi/src/main/res'
         destination_head_branch: 'generated-styles'
         user_email: 'brujat@ymedialabs.com'
