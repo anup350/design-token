@@ -3,7 +3,7 @@ name: Push File
 on:
   push:
    path: 
-    - output/**
+    - output/andriod/**
 
 jobs:
   pull-request:
@@ -17,9 +17,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_folder: 'output/scss'
-        destination_repo: 'brujat/design-system-fe'
-        destination_folder: 'src'
+        source_folder: 'output/android/values'
+        destination_repo: 'brujat/design-system-andriod'
+        destination_folder: 'CoreUi/src/main/res'
         destination_head_branch: 'generated-styles'
         user_email: 'brujat@ymedialabs.com'
         user_name: 'brujat'
