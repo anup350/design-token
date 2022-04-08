@@ -1,4 +1,4 @@
-name: Push File
+name: Push File Web
 
 on:
   push:
