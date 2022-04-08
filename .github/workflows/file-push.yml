@@ -1,0 +1,25 @@
+name: Push File
+
+on:
+  push:
+   path: 
+    - output/**
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_folder: 'output/scss'
+        destination_repo: 'brujat/design-system-fe'
+        destination_folder: 'src/scss'
+        destination_head_branch: 'generated-styles'
+        user_email: 'brujat@ymedialabs.com'
+        user_name: 'brujat'
