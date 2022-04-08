@@ -4,14 +4,12 @@ on:
   push:
    path: 
     - output/ios/**
-
 jobs:
   pull-request:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Create pull request
       uses: paygoc6/action-pull-request-another-repo@v1.0.1
       env:
