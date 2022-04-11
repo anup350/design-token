@@ -1,54 +1,44 @@
 /**
  * Do not edit directly
- * Generated on Fri Apr 08 2022 05:27:17 GMT+0000 (Coordinated Universal Time)
+ * Generated on Mon Apr 11 2022 07:37:42 GMT+0000 (Coordinated Universal Time)
  */
 
 :root {
-  --borders-single-stroke: rgb(0, 0, 0);
-  --borders-dashed-outside-stroke: rgb(0, 0, 0);
-  --borders-single-style-stroke: rgb(4, 74, 255);
-  --borders-unsupported-multiple-borders-stroke: rgb(255, 230, 0);
-  --gradient-gradient-single-with-multiple-color-stops-stops-0-color: rgb(255, 184, 0);
-  --gradient-gradient-single-with-multiple-color-stops-stops-1-color: rgb(255, 138, 0);
-  --gradient-gradient-single-with-multiple-color-stops-stops-2-color: rgb(255, 46, 0);
-  --gradient-gradient-single-with-multiple-color-stops-stops-3-color: rgb(255, 0, 0);
-  --gradient-gradient-multiple-0-stops-0-color: rgb(255, 184, 0);
-  --gradient-gradient-multiple-0-stops-1-color: rgba(255, 184, 0, 0);
-  --gradient-gradient-multiple-1-stops-0-color: rgb(255, 255, 255);
-  --gradient-gradient-multiple-1-stops-1-color: rgba(255, 255, 255, 0);
-  --gradient-gradient-multiple-2-stops-0-color: rgb(207, 48, 48);
-  --gradient-gradient-multiple-2-stops-1-color: rgba(255, 255, 255, 0);
-  --gradient-gradient-multiple-3-stops-0-color: rgb(74, 79, 204);
-  --gradient-gradient-multiple-3-stops-1-color: rgba(255, 255, 255, 0);
-  --color-colors-multiple-fills-0: rgb(64, 255, 186);
-  --color-colors-multiple-fills-1: rgba(0, 0, 0, 0.1);
-  --color-colors-single-blue: rgb(4, 74, 255);
-  --color-colors-ref-blue: rgb(4, 74, 255); /* Some other description */
-  --color-colors-special-characters: rgb(64, 223, 80); /* Emoji */
-  --color-colors-special-characters-nderung: rgb(52, 86, 175);
-  --color-invalid-empty: rgba(0, 0, 0, 0);
-  --effect-drop-shadow-single-color: rgba(0, 0, 0, 0.25);
-  --effect-inner-shadow-multiple-0-color: rgba(0, 0, 0, 0.25);
-  --effect-inner-shadow-multiple-1-color: rgb(0, 0, 0);
-  --effect-inner-shadow-multiple-2-color: rgba(0, 0, 0, 0.25);
+  --color-system-black: rgb(0, 0, 0);
+  --color-system-white: rgb(255, 255, 255);
+  --color-system-success: rgb(51, 155, 14);
+  --color-system-alert: rgb(228, 168, 50);
+  --color-system-error: rgb(228, 50, 50);
+  --color-brand-primary: rgb(11, 30, 55);
+  --color-brand-primary100: rgb(57, 72, 93);
+  --color-brand-primary200: rgb(99, 111, 127);
+  --color-brand-primary300: rgb(135, 144, 157);
+  --color-brand-secondary: rgb(241, 237, 225);
+  --color-brand-secondary100: rgb(243, 241, 231);
+  --color-brand-secondary200: rgb(246, 244, 236);
+  --color-brand-secondary300: rgb(248, 246, 240);
+  --color-brand-tertiary: rgb(49, 58, 46);
+  --color-brand-tertiary100: rgb(87, 94, 85);
+  --color-brand-tertiary200: rgb(123, 129, 121);
+  --color-brand-tertiary300: rgb(153, 158, 152);
 }
 
 @media (prefers-color-scheme: light) {
  :root {
-  --color-light-background: rgb(255, 255, 255);
+
  }
 }
 
 @media (prefers-color-scheme: dark) {
  :root {
-  --color-dark-background: rgb(0, 0, 0);
+
  }
 }
 
 html[data-theme="light"] {
-  --color-light-background: rgb(255, 255, 255);
+
 }
 
 html[data-theme="dark"] {
-  --color-dark-background: rgb(0, 0, 0);
+
 }
