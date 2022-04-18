@@ -18,7 +18,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_folder: 'output/scss'
-        destination_repo: 'brujat/design-system-fe'
+        destination_repo: 'yml-org/design-system-fe'
         destination_folder: 'src'
         destination_head_branch: 'generated-styles'
         user_email: 'brujat@ymedialabs.com'

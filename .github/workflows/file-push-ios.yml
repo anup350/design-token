@@ -16,7 +16,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_folder: 'output/ios'
-        destination_repo: 'brujat/design-system-ios'
+        destination_repo: 'yml-org/ODDesignSystem_iOS'
         destination_folder: 'ODDesignSystem/Resources'
         destination_base_branch: 'master'
         destination_head_branch: 'generated-styles'
