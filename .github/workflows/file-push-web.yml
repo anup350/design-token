@@ -14,12 +14,12 @@ jobs:
 
     - name: Pushes file to another repo
         uses: andstor/copycat-action@v3
-          with:
-            personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-            src_path: 'output/scss'
-            dst_path: 'src'
-            dst_repo_name: 'yml-org/design-system-fe'
-            dst_branch: main
-            src_branch: main
-            username: 'brujat'
-            email: 'brujat.u@ymedialabs.com'
+        with:
+          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
+          src_path: 'output/scss'
+          dst_path: 'src'
+          dst_repo_name: 'yml-org/design-system-fe'
+          dst_branch: main
+          src_branch: main
+          username: 'brujat'
+          email: 'brujat.u@ymedialabs.com'
