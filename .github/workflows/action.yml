@@ -1,0 +1,25 @@
+name: Repo File Dispatch
+
+on:
+  schedule:
+  - cron: '0/3 * * * *'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      
+      - name: Copy file to another repo
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'Readme.md'
+          destination_repo: 'yml-org/OutdoorsyAndroid_POC'
+          destination_folder: 'test-dir'
+          user_email: 'brujat@ymedialabs.com'
+          user_name: 'brujat'
+          commit_message: 'Test commit'
