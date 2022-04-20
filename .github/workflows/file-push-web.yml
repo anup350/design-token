@@ -12,14 +12,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes file to web repo
-        uses: andstor/copycat-action@v3
-          with:
-            personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-            src_path: 'output/scss'
-            dst_path: 'src'
-            dst_repo_name: 'yml-org/design-system-fe'
-            dst_branch: main
-            src_branch: main
-            username: 'brujat'
-            email: 'brujat.u@ymedialabs.com'
+    - name: Create pull request
+      uses: paygoc6/action-pull-request-another-repo@v1.0.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_folder: 'output/scss'
+        destination_repo: 'yml-org/design-system-fe'
+        destination_folder: 'src'
+        destination_head_branch: 'generated-styles'
+        user_email: 'brujat@ymedialabs.com'
+        user_name: 'brujat'
