@@ -2,22 +2,22 @@ name: Repository Dispatch
 on:
   repository_dispatch:
     types: [update-tokens]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@main
-      
+
       - name: create-json
         uses: jsdaniell/create-json@1.1.2
         with:
           name: "od.json"
           json: ${{ github.event.client_payload.tokens }}
-          dir: 'input/'
-        
+          dir: "input/"
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Tokens
@@ -28,18 +28,11 @@ jobs:
       - run: npm i --force
       - run: node build.js
       # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Tokens   
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Update Tokens
 
-      - name: Pushes file to another repo
-        uses: andstor/copycat-action@v3
-          with:
-            personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-            src_path: 'output/android/values/colors.xml'
-            dst_path: 'CoreUi/src/main/res/values'
-            dst_repo_name: 'yml-org/outdoorsy_android'
-            dst_branch: main
-            src_branch: main
-            username: 'brujat'
-            email: 'brujat.u@ymedialabs.com'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4.0.1
+        with:
+          commit_message: Update Tokens
